@@ -50,6 +50,9 @@ div.footer{
 }
  a {
      text-decoration: none ;
+     font-family: 'Oswald', sans-serif;
+  display: inline-block;
+  transition: all .5s ease;
   }
 a:link {
     color: white;
