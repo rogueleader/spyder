@@ -48,3 +48,15 @@ div.footer{
    padding-top:10px;
    text-align: center;
 }
+a:link {
+    color: white;
+}
+a:visited {
+    color: green;
+}
+a:hover {
+    color: hotpink;
+}
+a:active {
+    color: blue;
+}
