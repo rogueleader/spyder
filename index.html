@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="spy">
+<head>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.js">    </script>
+   <script src="ss.js" ></script>
+   <link rel="stylesheet" type="text/css" href="ss.css">
+<title>Spyder</title>
+</head>
+<body ng-controller="MainController">
+<h1 class="shine">Spyder</h1>
+
+  {{ err }}
+  <br><br><br>
+  <form name="searchEmail"  ng-submit="search(email)">
+    <input required type="search" ng-model="email"  placeholder="Email ID to crawl"/>
+    <input type="submit" value="Search"/>
+    <button type="button" ng-click="resetForm()">Reset</button>
+  </form>
+  <div ng-show="show">
+  <br>
+  Hi , {{name.givenName}} !
+  <br>
+  <ul>
+  <ul><button ng-click="pic=!pic">Photos</button></ul>
+  <div ng-show="pic">
+  <ul ng-repeat="x in userPics">
+    <img ng-src="{{x.url}}" style="height:200px;width:250px">
+  </ul>
+  </div>
+
+
+<ul><button ng-click="link=!link">Social Profiles</button></ul>
+  <div ng-show="link">
+  <ul ng-repeat="x in pro">
+   <a ng-href="{{x.url}}" >{{x.url}}</a>
+  </ul>
+  </div>
+
+</ul>
+</div>
+<div class="footer">
+Based on Fullcontact person API. 
+</div>
+
+  </body>
+</html>
